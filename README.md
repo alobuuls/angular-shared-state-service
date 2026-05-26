@@ -1,27 +1,135 @@
-# Observable1
+# 🚀 Angular Shared State Service
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
+Aplicación desarrollada en **Angular 12** que demuestra cómo compartir estado entre componentes utilizando `BehaviorSubject` de RxJS.
 
-## Development server
+El proyecto simula un sistema de comunicación global entre páginas sin necesidad de librerías externas como NgRx.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## ⚙️ Requisitos del sistema
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
 
-## Build
+- 📦 **Node.js:** `v14.x` o `v16.x` *(preferiblemente v14.21.3)*
+- 📦 **npm:** `v6+`
+- 🅰️ **Angular CLI:** `v12.x`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 🔍 Verificar versiones instaladas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+node -v
+npm -v
+ng version
+```
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🚀 Instalación del proyecto
 
-## Further help
+### 1️⃣ Clonar el repositorio
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+git clone <URL_DEL_REPO>
+cd angular-shared-state-service
+```
+
+### 2️⃣ Instalar dependencias
+
+```bash
+npm install
+```
+
+---
+
+## ▶️ Ejecutar el proyecto
+
+```bash
+ng serve
+```
+
+Luego abre:
+
+```bash
+http://localhost:4200
+```
+
+---
+
+## 🧠 Arquitectura del proyecto
+
+El proyecto está basado en un servicio central de estado:
+
+### 📦 StateService
+
+- Usa `BehaviorSubject` como fuente de estado global
+- Permite emitir y escuchar cambios de datos
+- Simula un store simple sin librerías externas
+
+---
+
+## 📄 Páginas del proyecto
+
+### 📌 Page 1 (Emitter)
+
+- Envía datos al estado global
+
+### 📌 Page 2 (Reader)
+
+- Solo escucha cambios del estado
+
+### 📌 Page 3 (Emitter + Reader)
+
+- Lee y actualiza el estado simultáneamente
+
+---
+
+## ⚙️ Funcionalidades principales
+
+- 🔄 Comunicación entre componentes sin `Input/Output`
+- 📡 Estado compartido con `BehaviorSubject`
+- 🧠 Patrón tipo mini state management
+- 📦 Observables en tiempo real
+- 🧩 Arquitectura desacoplada
+
+---
+
+## 🧰 Tecnologías utilizadas
+
+- 🅰️ Angular 12
+- ⚡ TypeScript
+- 🔄 RxJS (BehaviorSubject)
+- 🌐 Angular Forms
+
+---
+
+## 📁 Estructura del proyecto
+
+```bash
+src/app/
+├── pages/
+│   ├── page1/
+│   ├── page2/
+│   ├── page3/
+├── services/
+│   └── state.service.ts
+├── interfaces/
+│   └── obs.interface.ts
+```
+
+---
+
+## 🔥 Conceptos implementados
+
+- BehaviorSubject como store simple
+- Shared state between components
+- Reactive programming with RxJS
+- Component communication without @Input/@Output
+- Subscription to observables
+
+---
+
+## 📄 Licencia
+
+Este proyecto es de uso educativo y forma parte de un portafolio personal.
