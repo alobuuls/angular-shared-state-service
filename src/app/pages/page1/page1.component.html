@@ -1,0 +1,18 @@
+<h1>
+  Page 1
+</h1>
+
+<b>
+  Yo emito
+</b>
+
+<div>
+  <label>
+    Inserte nombre
+    <input type="text" [(ngModel)]="name">
+  </label>
+
+  <button (click)="emit(name)">
+    Enviar
+  </button>
+</div>

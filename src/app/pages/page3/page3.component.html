@@ -1,0 +1,18 @@
+<h1>
+  Page 3
+</h1>
+
+<b>
+  Yo leo y emito
+</b>
+
+<div>
+  <label>
+    Inserte nombre
+    <input type="text" [(ngModel)]="nameState">
+  </label>
+
+  <button (click)="emit(nameState)">
+    Enviar
+  </button>
+</div>
